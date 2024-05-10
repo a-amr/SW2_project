@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "123a10fa-d620-4d26-9687-0bd61de7c2a3",
+		"name": "MIcroservice Order",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34246526"
+	},
+	"item": [
+		{
+			"name": "Add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"date\": \"2024-5-7-10:00PM\",\r\n    \"address\": \"Egypt Cairo Nasr City\",\r\n    \"totalCost\": 12050.20,\r\n    \"user\": \r\n    {\r\n        \"id\": 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/order/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"order",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":1,\r\n    \"date\": \"2024-5-9-10:00PM\",\r\n    \"address\": \"Egypt Cairo Nasr City\",\r\n    \"totalCost\": 20000.99,\r\n    \"user\": \r\n    {\r\n        \"id\": 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/order/update",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"order",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/order/remove?order_id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"order",
+						"remove"
+					],
+					"query": [
+						{
+							"key": "order_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOrder",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/order/get?order_id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"order",
+						"get"
+					],
+					"query": [
+						{
+							"key": "order_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

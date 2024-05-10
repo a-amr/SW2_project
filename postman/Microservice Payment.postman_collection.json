@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "f6e1f025-f48b-4804-99ae-911a2ff3814c",
+		"name": "Microservice Payment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34246526"
+	},
+	"item": [
+		{
+			"name": "Add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"price\": 1150,\r\n    \"method\": \"card\",\r\n    \"user\": \r\n    {\r\n        \"id\": 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8084/payment/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"payment",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8084/payment/remove?payment_id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"payment",
+						"remove"
+					],
+					"query": [
+						{
+							"key": "payment_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
